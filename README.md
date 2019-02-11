@@ -1,6 +1,6 @@
 # spring-oauth2-server-jwt
 
-## create data (account)
+## create data (user details)
 ```
 CREATE TABLE account (
 	no bigserial NOT NULL,
@@ -25,7 +25,7 @@ insert into account_role values (currval('account_no_seq'), 'master');
 insert into account_role values (currval('account_no_seq'), 'admin');
 ```
 
-## create data (token)
+## create data (oauth client details)
 ```
 create table oauth_client_details (
 	client_id VARCHAR(256) PRIMARY KEY,
