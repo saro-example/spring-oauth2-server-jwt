@@ -1,0 +1,12 @@
+# test oauth server
+# - see README.MD
+db.oauth:
+  driverClassName: org.postgresql.Driver
+  jdbcUrl: jdbc:postgresql://192.168.0.40:5432/oauth?charSet=UTF-8&prepareThreshold=1
+  username: oauth
+  password: oauth
+  cachePrepStmts: true
+  maximumPoolSize: 50
+  minimumIdle: 1
+
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation: true
