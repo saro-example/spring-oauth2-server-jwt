@@ -1,6 +1,7 @@
-# spring-oauth2-server-jwt
+# spring oauth2 server jwt
 
-## create data (user details)
+# STEP 1
+## 1.1 create account data
 ```
 CREATE TABLE account (
 	no bigserial NOT NULL,
@@ -24,8 +25,7 @@ insert into account values (nextval('account_no_seq'), 'saro', 'd760688da522b4dc
 insert into account_role values (currval('account_no_seq'), 'master');
 insert into account_role values (currval('account_no_seq'), 'admin');
 ```
-
-## create data (oauth client details)
+## 1.2 crate oauth table
 ```
 create table oauth_client_details (
 	client_id VARCHAR(256) PRIMARY KEY,
