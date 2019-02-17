@@ -48,3 +48,15 @@ INSERT INTO public.oauth_client_details
 VALUES('saro', 'res-saro', '7d9d27f1ad2d9ce85850a4e61298f5e5be3f566fc20a7b54d19c1197e7a509094d4992195a5fb86e21bc10cd77223211c2c5c0beede19eb91cdd9d181eb81b9a', 'none', 'password,refresh_token', NULL, 'none', 3600, 3600, NULL, NULL);
 
 ```
+# STEP 2
+## set application.yml
+```
+db.oauth:
+  driverClassName: org.postgresql.Driver
+  jdbcUrl: jdbc:postgresql://192.168.0.40:5432/dbname?charSet=UTF-8&prepareThreshold=1
+  username: username
+  password: password
+  cachePrepStmts: true
+  maximumPoolSize: 50
+  minimumIdle: 1
+```
