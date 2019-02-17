@@ -18,9 +18,8 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 @EnableJpaRepositories(basePackages = "me.saro.example.oauth2.*", entityManagerFactoryRef = "entityManagerFactory", transactionManagerRef = "transactionManager")
 class DBConfiguration {
-
+    
     @Autowired DataSource dataSource;
-
     
     @Configuration
     @ConfigurationProperties(prefix = "db.oauth")
@@ -30,15 +29,13 @@ class DBConfiguration {
             return new HikariDataSource(this);
         }
     }
-
-    // 팩토리 매니저
-    @Bean("entityManagerFactory")
+    
+    @Bean
     LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder) {
         return builder.dataSource(dataSource).packages("me.saro.example.oauth2.*").build();
     }
-
-    // 트랜잭션 매니저
-    @Bean("transactionManager")
+    
+    @Bean
     PlatformTransactionManager transactionManager(EntityManagerFactoryBuilder builder) {
         return new JpaTransactionManager(entityManagerFactory(builder).getObject());
     }

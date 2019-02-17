@@ -15,22 +15,11 @@ public class UserController {
         
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         
-        // org.springframework.security.oauth2.provider.OAuth2Authentication@bfce795c: Principal: saro; Credentials: [PROTECTED]; Authenticated: true; Details: remoteAddress=127.0.0.1, tokenType=bearertokenValue=<TOKEN>; Granted Authorities: admin, master
         System.out.println(auth);
-        
-        // 
         System.out.println(auth.getCredentials());
-        
-        // remoteAddress=127.0.0.1, tokenType=bearertokenValue=<TOKEN>
         System.out.println(auth.getDetails());
-        
-        // saro
         System.out.println(auth.getName());
-        
-        // saro
         System.out.println(auth.getPrincipal());
-        
-        // [admin, master]
         System.out.println(auth.getAuthorities());
         
         return "HELLO ["+auth.getName()+"]";

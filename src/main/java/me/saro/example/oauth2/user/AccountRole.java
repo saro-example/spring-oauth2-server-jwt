@@ -13,9 +13,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import me.saro.example.oauth2.user.AccountRole.Key;
 
-/**
- * 회원 테이블
- */
 @Entity(name = "account_role")
 @Table(name = "account_role")
 @IdClass(Key.class)
