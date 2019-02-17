@@ -23,9 +23,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * 회원 테이블
- */
 @Entity(name = "account")
 @Table(name = "account")
 @Data
