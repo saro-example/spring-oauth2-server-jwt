@@ -43,7 +43,7 @@ create table oauth_client_details (
 
 -- testdata
 -- 7d9d27f1ad2d9ce85850a4e61298f5e5be3f566fc20a7b54d19c1197e7a509094d4992195a5fb86e21bc10cd77223211c2c5c0beede19eb91cdd9d181eb81b9a -> sha3_512('sec')
-INSERT INTO public.oauth_client_details
+INSERT INTO oauth_client_details
 (client_id, resource_ids, client_secret, "scope", authorized_grant_types, web_server_redirect_uri, authorities, access_token_validity, refresh_token_validity, additional_information, autoapprove)
 VALUES('saro', 'res-saro', '7d9d27f1ad2d9ce85850a4e61298f5e5be3f566fc20a7b54d19c1197e7a509094d4992195a5fb86e21bc10cd77223211c2c5c0beede19eb91cdd9d181eb81b9a', 'none', 'password,refresh_token', NULL, 'none', 3600, 3600, NULL, NULL);
 
